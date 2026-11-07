@@ -49,7 +49,6 @@ public class OverlayService extends Service {
             {"killer", "🗡", "キラー常時", "true"},
             {"penetrate", "➡", "貫通モード", "true"},
             {"turn1", "🔢", "ターン1表示", "true"},
-            {"stageclear", "🏁", "ステージクリア (ゲーム中5秒)", "false"}
     };
 
     @Override
