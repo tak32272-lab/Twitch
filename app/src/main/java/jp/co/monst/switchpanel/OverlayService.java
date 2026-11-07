@@ -43,7 +43,7 @@ public class OverlayService extends Service {
             {"invin", "🛡", "自HP 999999999 (無敵)", "true"},
             {"dropmax", "🍀", "ドロップMAX (ラック999)", "true"},
             {"fantastics", "✨", "Fantastics常時", "true"},
-            {"gimmick", "🚫", "ギミック無効 (8種)", "true"},
+            {"gimmick", "🚫", "ギミック無効 (DW/地雷/ブロック貫通)", "true"},
             {"ss", "⚡", "SS無限", "true"},
             {"weak", "🎯", "弱点ヒット常時", "true"},
             {"killer", "🗡", "キラー常時", "true"},
@@ -224,7 +224,7 @@ public class OverlayService extends Service {
                 + ".btn{flex:1;padding:8px 0;border:none;border-radius:6px;font-size:10px;font-weight:600;cursor:pointer}"
                 + ".b1{background:#6c5ce7;color:#fff}.b2{background:#ff4757;color:#fff}"
                 + "</style></head><body><div class='w'>"
-                + "<div class='h'><h1>Monst<b>Switch</b> v34</h1>"
+                + "<div class='h'><h1>Monst<b>Switch</b> v37</h1>"
                 + "<div class='hbtns'>"
                 + "<button class='hbtn hide' onclick='MSB.hide()' title='完全に隠す'>👁</button>"
                 + "<button class='hbtn cls' onclick='MSB.close()' title='⚙に戻す'>−</button>"
