@@ -37,7 +37,7 @@ public class OverlayService extends Service {
     private boolean hidden = false;
 
     private final Map<String, Boolean> state = new LinkedHashMap<>();
-    // 11機能 (ラベル, アイコン, デフォルト)
+    // 13機能 (ラベル, アイコン, デフォルト)
     private static final String[][] FEATS = {
             {"damage", "👊", "ダメージ 999999999", "true"},
             {"invin", "🛡", "自HP 999999999 (無敵)", "true"},
@@ -49,6 +49,9 @@ public class OverlayService extends Service {
             {"killer", "🗡", "キラー常時", "true"},
             {"penetrate", "➡", "貫通モード", "true"},
             {"turn1", "🔢", "ターン1表示", "true"},
+            {"wallthrough", "🧱", "壁すり抜け", "true"},
+            {"homing", "🏠", "全弾ホーミング", "true"},
+            {"speedx2", "⏩", "ゲーム2倍速", "true"},
     };
 
     @Override
@@ -224,7 +227,7 @@ public class OverlayService extends Service {
                 + ".btn{flex:1;padding:8px 0;border:none;border-radius:6px;font-size:10px;font-weight:600;cursor:pointer}"
                 + ".b1{background:#6c5ce7;color:#fff}.b2{background:#ff4757;color:#fff}"
                 + "</style></head><body><div class='w'>"
-                + "<div class='h'><h1>Monst<b>Switch</b> v37</h1>"
+                + "<div class='h'><h1>Monst<b>Switch</b> v38</h1>"
                 + "<div class='hbtns'>"
                 + "<button class='hbtn hide' onclick='MSB.hide()' title='完全に隠す'>👁</button>"
                 + "<button class='hbtn cls' onclick='MSB.close()' title='⚙に戻す'>−</button>"
