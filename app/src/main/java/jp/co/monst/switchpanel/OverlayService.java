@@ -49,7 +49,7 @@ public class OverlayService extends Service {
             {"killer", "🗡", "キラー常時", "true"},
             {"penetrate", "➡", "貫通モード", "true"},
             {"turn1", "🔢", "ターン1表示", "true"},
-            {"stageclear", "🏁", "ステージクリア (5秒遅延)", "false"}
+            {"stageclear", "🏁", "ステージクリア (ゲーム中5秒)", "false"}
     };
 
     @Override
@@ -225,7 +225,7 @@ public class OverlayService extends Service {
                 + ".btn{flex:1;padding:8px 0;border:none;border-radius:6px;font-size:10px;font-weight:600;cursor:pointer}"
                 + ".b1{background:#6c5ce7;color:#fff}.b2{background:#ff4757;color:#fff}"
                 + "</style></head><body><div class='w'>"
-                + "<div class='h'><h1>Monst<b>Switch</b> v33</h1>"
+                + "<div class='h'><h1>Monst<b>Switch</b> v34</h1>"
                 + "<div class='hbtns'>"
                 + "<button class='hbtn hide' onclick='MSB.hide()' title='完全に隠す'>👁</button>"
                 + "<button class='hbtn cls' onclick='MSB.close()' title='⚙に戻す'>−</button>"
