@@ -37,21 +37,28 @@ public class OverlayService extends Service {
     private boolean hidden = false;
 
     private final Map<String, Boolean> state = new LinkedHashMap<>();
-    // 13機能 (ラベル, アイコン, デフォルト)
+    // 20機能 (キー, アイコン, ラベル, デフォルト)
     private static final String[][] FEATS = {
-            {"damage", "👊", "ダメージ 999999999", "true"},
-            {"invin", "🛡", "自HP 999999999 (無敵)", "true"},
-            {"dropmax", "🍀", "ドロップMAX (ラック999)", "true"},
-            {"fantastics", "✨", "Fantastics常時", "true"},
-            {"gimmick", "🚫", "ギミック無効 (DW/地雷/ブロック貫通)", "true"},
+            {"damage", "👊", "ダメージ MAX", "true"},
+            {"invin", "🛡", "無敵", "true"},
+            {"dropmax", "🍀", "ドロップMAX", "true"},
+            {"fantastics", "✨", "Fantastics", "true"},
+            {"gimmick", "🚫", "ギミック無効", "true"},
             {"ss", "⚡", "SS無限", "true"},
-            {"weak", "🎯", "弱点ヒット常時", "true"},
+            {"weak", "🎯", "弱点常時", "true"},
             {"killer", "🗡", "キラー常時", "true"},
             {"penetrate", "➡", "貫通モード", "true"},
-            {"turn1", "🔢", "ターン1表示", "true"},
+            {"turn1", "🔢", "ターン1", "true"},
             {"wallthrough", "🧱", "壁すり抜け", "true"},
-            {"homing", "🏠", "全弾ホーミング", "true"},
-            {"speedx2", "⏩", "ゲーム2倍速", "true"},
+            {"homing", "🏠", "ホーミング", "true"},
+            {"speedx2", "⏩", "2倍速", "true"},
+            {"luckmaxbonus", "🎰", "ラックボーナスMAX", "true"},
+            {"friendcombo", "💞", "友情コンボ全発動", "true"},
+            {"powerfield", "💪", "パワーフィールド強化", "true"},
+            {"wallbounce", "🏐", "壁バウンス強化", "true"},
+            {"nobarrier", "🔓", "ダメバリ無効", "true"},
+            {"ignoreblock", "🧊", "ブロック無視", "true"},
+            {"gempassive", "💎", "宝石パッシブ常時", "true"},
     };
 
     @Override
@@ -159,7 +166,7 @@ public class OverlayService extends Service {
         panel.loadDataWithBaseURL(null, buildHtml(), "text/html", "UTF-8", null);
 
         panelParams = new WindowManager.LayoutParams(
-                dp(300), dp(520),
+                dp(300), dp(640),
                 windowType(),
                 WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
                 PixelFormat.TRANSLUCENT);
@@ -212,7 +219,7 @@ public class OverlayService extends Service {
                 + ".hbtn{width:26px;height:26px;border-radius:50%;color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:26px;border:none;cursor:pointer}"
                 + ".hide{background:#888}"
                 + ".cls{background:#ff4757}"
-                + ".b{max-height:390px;overflow-y:auto;-webkit-overflow-scrolling:touch}"
+                + ".b{max-height:520px;overflow-y:auto;-webkit-overflow-scrolling:touch}"
                 + ".b::-webkit-scrollbar{width:2px}.b::-webkit-scrollbar-thumb{background:#6c5ce7}"
                 + ".r{display:flex;align-items:center;padding:8px 12px;border-bottom:1px solid rgba(255,255,255,0.04)}"
                 + ".i{font-size:16px;width:24px;text-align:center;margin-right:8px;flex-shrink:0}"
@@ -227,7 +234,7 @@ public class OverlayService extends Service {
                 + ".btn{flex:1;padding:8px 0;border:none;border-radius:6px;font-size:10px;font-weight:600;cursor:pointer}"
                 + ".b1{background:#6c5ce7;color:#fff}.b2{background:#ff4757;color:#fff}"
                 + "</style></head><body><div class='w'>"
-                + "<div class='h'><h1>Monst<b>Switch</b> v38</h1>"
+                + "<div class='h'><h1>Monst<b>Switch</b> v39</h1>"
                 + "<div class='hbtns'>"
                 + "<button class='hbtn hide' onclick='MSB.hide()' title='完全に隠す'>👁</button>"
                 + "<button class='hbtn cls' onclick='MSB.close()' title='⚙に戻す'>−</button>"
