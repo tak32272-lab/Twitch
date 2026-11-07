@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#0a0a0f">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MonstSwitch"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#6c5ce7"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="v33 / Monster Strike 33.0.0 Controller"
+        android:textSize="12sp"
+        android:textColor="#888"
+        android:layout_marginBottom="36dp" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止中"
+        android:textSize="14sp"
+        android:textColor="#e0e0e8"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#14141f"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Switch 起動"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:backgroundTint="#6c5ce7"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/stop_btn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Switch 停止"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:backgroundTint="#ff4757" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="起動後、モンスト画面に ⚙ ボタン出現。\nタップでトグルパネル展開。\n「👁」で完全に隠す、「−」で⚙に戻す。"
+        android:textSize="11sp"
+        android:textColor="#666"
+        android:gravity="center"
+        android:layout_marginTop="24dp" />
+
+</LinearLayout>
