@@ -37,25 +37,12 @@ public class OverlayService extends Service {
     private boolean hidden = false;
 
     private final Map<String, Boolean> state = new LinkedHashMap<>();
-    // 17機能 (キー, アイコン, ラベル, デフォルト) ※クラッシュ対策で速度/パワーフィールド/壁バウンスを削除
+    // v46: 実績ある4機能に戻した安定版（全てON）
     private static final String[][] FEATS = {
-            {"damage", "👊", "ダメージ MAX", "false"},
-            {"invin", "🛡", "無敵", "false"},
-            {"dropmax", "🍀", "ドロップMAX", "false"},
-            {"fantastics", "✨", "Fantastics", "false"},
-            {"gimmick", "🚫", "ギミック無効", "false"},
-            {"ss", "⚡", "SS無限", "false"},
-            {"weak", "🎯", "弱点常時", "false"},
-            {"killer", "🗡", "キラー常時", "false"},
-            {"penetrate", "➡", "貫通モード", "false"},
-            {"turn1", "🔢", "ターン1", "false"},
-            {"wallthrough", "🧱", "壁すり抜け", "false"},
-            {"homing", "🏠", "ホーミング", "false"},
-            {"luckmaxbonus", "🎰", "ラックボーナスMAX", "false"},
-            {"friendcombo", "💞", "友情コンボ全発動", "false"},
-            {"nobarrier", "🔓", "ダメバリ無効", "false"},
-            {"ignoreblock", "🧊", "ブロック無視", "false"},
-            {"gempassive", "💎", "宝石パッシブ常時", "false"},
+            {"onepunch", "👊", "ワンパン(×50)", "true"},
+            {"invin", "🛡", "無敵", "true"},
+            {"ss", "⚡", "SS無限", "true"},
+            {"autoclear", "🤖", "自動クリア", "false"},
     };
 
     @Override
@@ -231,7 +218,7 @@ public class OverlayService extends Service {
                 + ".btn{flex:1;padding:8px 0;border:none;border-radius:6px;font-size:10px;font-weight:600;cursor:pointer}"
                 + ".b1{background:#6c5ce7;color:#fff}.b2{background:#ff4757;color:#fff}"
                 + "</style></head><body><div class='w'>"
-                + "<div class='h'><h1>Monst<b>Switch</b> v42</h1>"
+                + "<div class='h'><h1>Monst<b>Switch</b> v46</h1>"
                 + "<div class='hbtns'>"
                 + "<button class='hbtn hide' onclick='MSB.hide()' title='完全に隠す'>👁</button>"
                 + "<button class='hbtn cls' onclick='MSB.close()' title='⚙に戻す'>−</button>"
