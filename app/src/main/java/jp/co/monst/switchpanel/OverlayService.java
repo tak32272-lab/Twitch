@@ -37,13 +37,18 @@ public class OverlayService extends Service {
     private boolean hidden = false;
 
     private final Map<String, Boolean> state = new LinkedHashMap<>();
-    // v47: 5機能・起動直後から全てON
+    // v50: 全10機能・起動直後から全てON(フックのキーと一致)
     private static final String[][] FEATS = {
-            {"onepunch", "👊", "ワンパン(×50)", "true"},
-            {"invin", "🛡", "無敵", "true"},
-            {"ss", "⚡", "SS無限", "true"},
-            {"penetrate", "➡", "常時貫通", "true"},
-            {"heart", "❤", "ハート常時", "true"},
+            {"onepunch", "👊", "ワンパン(9999万)", "true"},
+            {"invin",    "🛡", "無敵", "true"},
+            {"ss",       "⚡", "SS無限", "true"},
+            {"fantastic","✨", "ファンタスティック常時", "true"},
+            {"critical", "💥", "クリティカル常時", "true"},
+            {"penetrate","➡", "反射→貫通", "true"},
+            {"heart",    "❤", "ハート(回復)常時", "true"},
+            {"buff",     "🔺", "バフ(パワーアップ)", "true"},
+            {"barrier",  "🧊", "バリア無効化", "true"},
+            {"zone",     "🚫", "ゾーン無効化", "true"},
     };
 
     @Override
@@ -227,7 +232,7 @@ public class OverlayService extends Service {
                 + ".btn{flex:1;padding:8px 0;border:none;border-radius:6px;font-size:10px;font-weight:600;cursor:pointer}"
                 + ".b1{background:#6c5ce7;color:#fff}.b2{background:#ff4757;color:#fff}"
                 + "</style></head><body><div class='w'>"
-                + "<div class='h'><h1>Monst<b>Switch</b> v47</h1>"
+                + "<div class='h'><h1>Monst<b>Switch</b> v50</h1>"
                 + "<div class='hbtns'>"
                 + "<button class='hbtn hide' onclick='MSB.hide()' title='完全に隠す'>👁</button>"
                 + "<button class='hbtn cls' onclick='MSB.close()' title='⚙に戻す'>−</button>"
